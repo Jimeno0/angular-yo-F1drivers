@@ -20,6 +20,8 @@
 
 
   <body ng-controller="DriversController as ctrl">
+
+    <input type="text" ng-model="ctrl.nameFilter" placeholder="search...">
     <table>
       <thead>
         <tr>
@@ -27,7 +29,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="driver in ctrl.drivers">
+        <tr ng-repeat="driver in ctrl.drivers | filter: ctrl.searchFiller">
           <td>{{$index + 1}}</td>
           <td>{{driver.Driver.givenName}} {{driver.Driver.familyName}}</td>
           <td>{{driver.Constructors[0].name}}</td>
@@ -37,16 +39,6 @@
         </tr>
       </tbody>
     </table> 
-
-
-
-<!--     <ul>
-      <li ng-repeat="driver in ctrl.drivers">
-        <span>Driver's name: {{driver.Driver.familyName}}</span>
-        <br>
-        <span>Driver's nationality: {{driver.Driver.nationality}}</span>
-      </li>
-    </ul> -->
   
   </body>
 
