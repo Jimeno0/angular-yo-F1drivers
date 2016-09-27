@@ -1,9 +1,12 @@
 angular.module('driversList')
-.controller('DriversController', function DriversController ($scope){
+.controller('DriversController', function DriversController (ergastAPIservice){
   var self = this;
-  self.drivers = [
-  {name:'Alonso', country:'Spain'},
-  {name:'Vettel', country:'Germany'},
-  {name:'Button', country:'England'}
-  ];
+
+  ergastAPIservice.getDrivers().success(function(response){
+
+    self.drivers = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+    console.log(response.MRData.StandingsTable.StandingsLists[0].DriverStandings);
+
+  });
+
 });

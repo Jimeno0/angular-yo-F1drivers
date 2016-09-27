@@ -20,14 +20,33 @@
 
 
   <body ng-controller="DriversController as ctrl">
-    
-    <ul>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4"> Drivers Championship Standings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="driver in ctrl.drivers">
+          <td>{{$index + 1}}</td>
+          <td>{{driver.Driver.givenName}} {{driver.Driver.familyName}}</td>
+          <td>{{driver.Constructors[0].name}}</td>
+          <td>{{driver.points}}</td>
+
+
+        </tr>
+      </tbody>
+    </table> 
+
+
+
+<!--     <ul>
       <li ng-repeat="driver in ctrl.drivers">
-        <span>Driver's name: {{driver.name}}</span>
+        <span>Driver's name: {{driver.Driver.familyName}}</span>
         <br>
-        <span>Driver's nationality: {{driver.country}}</span>
+        <span>Driver's nationality: {{driver.Driver.nationality}}</span>
       </li>
-    </ul>
+    </ul> -->
   
   </body>
 

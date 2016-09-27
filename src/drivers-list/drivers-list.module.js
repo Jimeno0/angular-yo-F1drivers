@@ -1,4 +1,4 @@
 'use strict';
 
-var phoneListModule = angular.module('driversList', []);
+var phoneListModule = angular.module('driversList', ['core.drivers']);
 
