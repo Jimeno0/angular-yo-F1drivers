@@ -8,7 +8,6 @@ angular.module('driversList')
       var self = this;
 
       ergastAPIservice.getDrivers().success(function(response){
-
         self.drivers = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
 
       });
