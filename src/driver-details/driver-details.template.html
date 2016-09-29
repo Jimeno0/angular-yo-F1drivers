@@ -1,23 +1,23 @@
-<section id="main">
-  <a href="./#/drivers"><- Back to drivers list</a>
-  <nav id="secondary" class="main-nav">
+<section >
+  
+  <nav id="secondary" class="driver-nav small-shadow">
     <div class="driver-picture">
-      <div class="avatar">
-        <img ng-src="img/drivers/{{ctrl.driver.Driver.driverId}}.png" />
-        <img ng-src="img/flags/{{ctrl.driver.Driver.nationality}}.png" /><br/>
+        <img class="driver-img" ng-src="img/drivers/{{ctrl.driver.Driver.driverId}}.png" />
+        <br/>
         {{ctrl.driver.Driver.givenName}} {{ctrl.driver.Driver.familyName}}
-      </div>
     </div>
     <div class="driver-status">
       Country: {{ctrl.driver.Driver.nationality}}   <br/>
       Team: {{ctrl.driver.Constructors[0].name}}<br/>
       Birth: {{ctrl.driver.Driver.dateOfBirth}}<br/>
       <a href="{{ctrl.driver.Driver.url}}" target="_blank">Biography</a>
+      <br>
+      <a href="./#/drivers">Back to drivers list</a>
     </div>
   </nav>
 
-  <div class="main-content">
-    <table class="result-table">
+  <div class ="small-shadow">
+    <table >
       <thead>
         <tr><th colspan="5">Formula 1 2016 Results</th></tr>
       </thead>
