@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('app')
   .config(['$locationProvider','$routeProvider', 
     function config($locationProvider, $routeProvider){
       

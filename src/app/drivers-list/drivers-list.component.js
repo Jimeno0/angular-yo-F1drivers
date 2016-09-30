@@ -2,7 +2,7 @@
 
 angular.module('driversList')
   .component('driversList',{
-    templateUrl:'drivers-list/drivers-list.template.html',
+    templateUrl:'app/drivers-list/drivers-list.template.html',
     controllerAs:'ctrl',
     controller: function driverListController(ergastAPIservice){
       var self = this;
